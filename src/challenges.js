@@ -12,13 +12,16 @@ function calcArea(base, height) {
 // Desafio 3
 let palavra = 'go Trybe';
 function splitSentence() {
-   
+   let nova = ''
     for (i in palavra){
-        console.log(i)
-        if (palavra[i]= ' '){
+        // console.log(i)
+        if (palavra[i] != ' '){
+            nova += palavra[i].split('')
             
+        }else {
+           
         }
-
+        console.log(nova)
     }
   }
 
