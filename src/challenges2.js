@@ -1,5 +1,6 @@
 // Desafio 10
 function techList() {
+  let a = 
   // seu código aqui
 }
 
