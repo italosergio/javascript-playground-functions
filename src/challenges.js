@@ -42,20 +42,27 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  for (let i of array){
-    for (let j of array){
-      if(i>j){
-        
-        let memoria = 
-      }else{
-        let memoria =
-      }
+  
+  let mem = Number.NEGATIVE_INFINITY
 
+    for (i of array){
+        if( i > mem){
+            
+            mem = i;
+        }
+}
+let cont = 0
+
+    for (i of array){
+        if (mem === i)
+        
+            cont+=1
     }
 
-  }
-  return memoria
+
+return cont
 }
+
 
 // Desafio 7
 function catAndMouse() {
