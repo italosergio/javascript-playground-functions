@@ -30,8 +30,9 @@ array.push(nova);
 return array;
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(Array) {
+  return novoArray  
+
 }
 
 // Desafio 5
