@@ -30,10 +30,11 @@ array.push(nova);
 return array;
 }
 // Desafio 4
-let Array = ['captain', 'my', 'captain']
+let array = ['captain', 'my', 'captain']
 function concatName(Array) {
   let novaArray = []
-  novaArray= array[0] + array[array.length]
+  i = array.length
+  novaArray= array[0] + array[i]
   return novaArray
 }
 console.log(concatName())
