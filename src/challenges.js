@@ -10,20 +10,26 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-// Desafio 3
-let palavra = 'go Trybe';
 function splitSentence() {
-   let nova = ''
-    for (i in palavra){
+ 
+  let palavra = 'go Trybe';
+
+  let nova = '';
+  let array = [];
+  
+   for (i in palavra){
         if (palavra[i] != ' '){
-            nova += palavra[i].split('')
+            nova+=palavra[i];
             
-        }else {
-            nova += ' '
+          }else {
+            array.push(nova);
+            nova = ' ';
+          }
         }
-    }
-    return nova
+        array.push(nova);
+        return array;
   }
+  console.log(splitSentence())
 // Desafio 4
 function concatName() {
   // seu código aqui
