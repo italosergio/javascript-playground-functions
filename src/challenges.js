@@ -43,7 +43,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   
-  let mem = Number.NEGATIVE_INFINITY
+  let mem = 0
 
     for (i of array){
         if( i > mem){
