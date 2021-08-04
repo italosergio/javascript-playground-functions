@@ -29,7 +29,6 @@ function splitSentence() {
         array.push(nova);
         return array;
   }
-  console.log(splitSentence())
 // Desafio 4
 function concatName() {
   // seu código aqui
