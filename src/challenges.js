@@ -31,10 +31,8 @@ return array;
 }
 // Desafio 4
 function concatName(array) {
-  let novaArray = []
-  let i = array.length-1
-  novaArray= array[i] +', '+ array[0]
-  return novaArray
+  
+  return novaArray = array[array.length-1] +', '+ array[0]
 }
 
 // Desafio 5
