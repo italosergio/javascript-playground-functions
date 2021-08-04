@@ -30,10 +30,13 @@ array.push(nova);
 return array;
 }
 // Desafio 4
+let Array = ['captain', 'my', 'captain']
 function concatName(Array) {
-  return novoArray  
-
+  let novaArray = []
+  novaArray= array[0] + array[array.length]
+  return novaArray
 }
+console.log(concatName())
 
 // Desafio 5
 function footballPoints() {
