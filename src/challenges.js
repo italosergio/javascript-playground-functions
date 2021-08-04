@@ -31,13 +31,13 @@ return array;
 }
 // Desafio 4
 function concatName(array) {
-  
+
   return novaArray = array[array.length-1] +', '+ array[0]
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return pontos = wins*3 + ties*1
 }
 
 // Desafio 6
