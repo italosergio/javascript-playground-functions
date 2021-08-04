@@ -22,7 +22,7 @@ function splitSentence(string) {
             
       }else {
           array.push(nova);
-          nova = ' ';
+          nova = '';
 
         }
     }
