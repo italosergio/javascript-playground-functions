@@ -100,24 +100,33 @@ function fizzBuzz(array) {
   }
 
 // Desafio 9
+
 let string = 'aeiou'
 
 function encode(string) {
-    let stringh = ''
-//   let numberStringArrow = string.push('')
-  for (i in string){
-        stringh.push(i)
-  }
 
-  return stringh
-  
+    let numStringArray = []
+    // let j = 1
+    // for (i in string){      
+    //   numStringArray.push(j)
+    //   j+=1
+    // }
+
+    for (i of string){
+      if (i==='a'){
+        numStringArray.push('1')
+      }else{
+        numStringArray.push(i)
+      }
+    }
+    // for ()
+  return numStringArray
 }
 console.log(encode(string))
+
   // return 
-  
-}
-console.log(encode(string))
-function decode() {
+
+  function decode() {
   // seu código aqui
 }
 
