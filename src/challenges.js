@@ -123,7 +123,8 @@ function encode(string) {
         numStringArray.push('4')
       }else if (i==='u'){
         numStringArray.push('5')
-      }
+      }else 
+        numStringArray.push(i)
     }
 
   return numStringArray.join('')
