@@ -101,8 +101,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 
-let string = 'aeiou'
-
+let string = 'aeiou italo'
 function encode(string) {
 
     let numStringArray = []
@@ -113,13 +112,20 @@ function encode(string) {
     // }
 
     for (i of string){
+      
       if (i==='a'){
         numStringArray.push('1')
-      }else{
-        numStringArray.push(i)
+      }else if (i==='e'){
+        numStringArray.push('2')
+      }else if (i==='i'){
+        numStringArray.push('3')
+      }else if (i==='o'){
+        numStringArray.push('4')
+      }else if (i==='u'){
+        numStringArray.push('5')
       }
     }
-    // for ()
+
   return numStringArray.join('')
 }
 console.log(encode(string))
