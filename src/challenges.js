@@ -113,7 +113,9 @@ function encode(string) {
 
     for (i of string){
       
-      if (i==='a'){
+      if (i!='a' && i!='e' && i!='i' && i!='o' && i!='u'){
+        numStringArray.push(i)
+      }else if (i==='a'){
         numStringArray.push('1')
       }else if (i==='e'){
         numStringArray.push('2')
@@ -123,8 +125,7 @@ function encode(string) {
         numStringArray.push('4')
       }else if (i==='u'){
         numStringArray.push('5')
-      }else 
-        numStringArray.push(i)
+      }
     }
 
   return numStringArray.join('')
