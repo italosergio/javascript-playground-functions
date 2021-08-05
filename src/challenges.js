@@ -120,7 +120,7 @@ function encode(string) {
       }
     }
     // for ()
-  return numStringArray
+  return numStringArray.join('')
 }
 console.log(encode(string))
 
