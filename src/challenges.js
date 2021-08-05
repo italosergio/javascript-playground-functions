@@ -101,15 +101,9 @@ function fizzBuzz(array) {
 
 // Desafio 9
 
-let string = 'aeiou italo'
 function encode(string) {
 
     let numStringArray = []
-    // let j = 1
-    // for (i in string){      
-    //   numStringArray.push(j)
-    //   j+=1
-    // }
 
     for (i of string){
       
@@ -130,12 +124,29 @@ function encode(string) {
 
   return numStringArray.join('')
 }
-console.log(encode(string))
 
-  // return 
+  function decode(string) {
 
-  function decode() {
-  // seu código aqui
+    let numStringArray = []
+
+    for (i of string){
+      
+      if (i!='1' && i!='2' && i!='3' && i!='4' && i!='5'){
+        numStringArray.push(i)
+      }else if (i==='1'){
+        numStringArray.push('a')
+      }else if (i==='2'){
+        numStringArray.push('e')
+      }else if (i==='3'){
+        numStringArray.push('i')
+      }else if (i==='4'){
+        numStringArray.push('o')
+      }else if (i==='5'){
+        numStringArray.push('u')
+      }
+    }
+
+    return numStringArray.join('')
 }
 
 module.exports = {
