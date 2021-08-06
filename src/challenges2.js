@@ -1,12 +1,30 @@
 // Desafio 10
 
-let array=["React", "Jest", "HTML", "CSS", "JavaScript"]
-let name = 'italo'
+// let array=["React", "Jest", "HTML", "CSS", "JavaScript"]
+// let name = 'italo';
+
 function techList(array, name) {
   let nArray = array.sort()
-  return nArray
+  let mArray = []
+
+  // if(nArray.length !== 0){
+    
+    for (let i of nArray){
+
+      let objeto = {
+        tech: i,
+        name: name
+      }
+        mArray.push(objeto)
+    }
+    return mArray
+  // }else{
+  //   return 'Vazio!'
+  // }
 }
-console.log(techList(nArray))
+// console.log(techList())
+
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
