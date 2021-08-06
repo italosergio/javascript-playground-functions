@@ -26,13 +26,13 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-let lineA = 5
-let lineB = 2
-let lineC = 2
+// let lineA = 2
+// let lineB = 2
+// let lineC = 5
 
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
 
-  if (lineA < lineB+lineC && lineB < lineA+lineC && lineC < lineA+lineB){
+  if (lineA < lineB+lineC && lineB < lineA+lineC && lineC < lineA+lineB && lineA>Math.abs(lineB-lineC) && lineB > Math.abs(lineA-lineC) && lineC > Math.abs(lineB-lineA)){
     return true
   }else{
     return false
