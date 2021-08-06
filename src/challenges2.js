@@ -1,8 +1,5 @@
 // Desafio 10
 
-// let array=["React", "Jest", "HTML", "CSS", "JavaScript"]
-// let name = 'italo';
-
 function techList(array, name) {
   let nArray = array.sort()
   let mArray = []
@@ -22,8 +19,6 @@ function techList(array, name) {
     return 'Vazio!'
   }
 }
-// console.log(techList())
-
 
 // Desafio 11
 function generatePhoneNumber() {
