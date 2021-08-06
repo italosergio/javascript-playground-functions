@@ -1,9 +1,12 @@
 // Desafio 10
-function techList() {
-  let a = 
-  // seu código aqui
-}
 
+let array=["React", "Jest", "HTML", "CSS", "JavaScript"]
+let name = 'italo'
+function techList(array, name) {
+  let nArray = array.sort()
+  return nArray
+}
+console.log(techList(nArray))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
