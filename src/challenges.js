@@ -1,38 +1,31 @@
 // Desafio 1
 function compareTrue(a, b) {
-  return a && b
-
+  return a && b;
 }
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = (base * height)/2;  
-  return areaTriangulo
+  let areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
 function splitSentence(string) {
-    
   let nova = '';
   let array = [];
-  
-   for (i in string){
-
-      if (string[i] !== ' '){
-            nova+=string[i];
-            
-      }else {
-          array.push(nova);
-          nova = '';
-
-        }
+  for (let i in string) {
+    if (string[i] !== ' ') {
+      nova += string[i];
+    } else {
+      array.push(nova);
+      nova = '';
     }
-array.push(nova);
-return array;
+  }
+  array.push(nova);
+  return array;
 }
 // Desafio 4
 function concatName(array) {
-
-  return novaArray = array[array.length-1] +', '+ array[0]
+  return novaArray = array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
@@ -45,7 +38,7 @@ function highestCount(array) {
   
   let mem = Number.NEGATIVE_INFINITY
 
-    for (i of array){
+    for (let i of array){
         if( i > mem){
             
             mem = i;

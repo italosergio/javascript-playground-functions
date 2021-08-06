@@ -1,7 +1,7 @@
 // Desafio 10
 
 function techList(array, name) {
-  let nArray = array.sort()
+  let nArray = array.sort();
   let mArray = []
 
   if(nArray.length !== 0){
@@ -23,14 +23,28 @@ function techList(array, name) {
 // Desafio 11
 // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
 function generatePhoneNumber(array) {
- 
   if (array.length === 11){
-    return true
+    
+    for (let i of array){
+      
+        let repetiu=0
+      for (j of array){
+        if (j === i){
+          
+          repetiu +=1
+        }
+      }
+      
+      if (array[i] < 0 || array[i] > 9 || repetiu >=3){
+        return "não é possível gerar um número de telefone com esses valores"
+      }
+    }
+    return '('+array[0]+array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
   }else{
     return "Array com tamanho incorreto."
   }
 }
-console.log(generatePhoneNumber())
+// console.log(generatePhoneNumber())
 
 // Desafio 12
 // let lineA = 2
@@ -39,7 +53,7 @@ console.log(generatePhoneNumber())
 
 function triangleCheck(lineA, lineB, lineC) {
 
-  if (lineA < lineB+lineC && lineB < lineA+lineC && lineC < lineA+lineB && lineA>Math.abs(lineB-lineC) && lineB > Math.abs(lineA-lineC) && lineC > Math.abs(lineB-lineA)){
+  if (lineA < lineB+lineC && lineB < lineA+lineC && lineC < lineA+lineB && lineA > Math.abs(lineB-lineC) && lineB > Math.abs(lineA-lineC) && lineC > Math.abs(lineB-lineA)){
     return true
   }else{
     return false
