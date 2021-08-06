@@ -28,7 +28,7 @@ function generatePhoneNumber() {
 // Desafio 12
 // let lineA = 2
 // let lineB = 2
-// let lineC = 5
+// let lineC = 5 
 
 function triangleCheck(lineA, lineB, lineC) {
 
