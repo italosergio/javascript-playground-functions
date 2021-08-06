@@ -7,7 +7,7 @@ function techList(array, name) {
   let nArray = array.sort()
   let mArray = []
 
-  // if(nArray.length !== 0){
+  if(nArray.length !== 0){
     
     for (let i of nArray){
 
@@ -18,9 +18,9 @@ function techList(array, name) {
         mArray.push(objeto)
     }
     return mArray
-  // }else{
-  //   return 'Vazio!'
-  // }
+  }else{
+    return 'Vazio!'
+  }
 }
 // console.log(techList())
 
