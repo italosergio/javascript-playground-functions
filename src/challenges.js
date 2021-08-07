@@ -110,8 +110,8 @@ function encode(string) {
 
 function decode(string) {
   let nString = string;
-  let refArray = ['a','e','i','o','u'];
-  let refArrayNum = ['1','2','3','4','5']; 
+  let refArray = ['a', 'e', 'i', 'o', 'u'];
+  let refArrayNum = ['1', '2', '3', '4', '5'];
   for (let i of string) {
     if (refArrayNum.includes(i)) { // copyrights eric-cruz-plyground-functions | GitHub: Effolex
       nString = nString.replace(i, refArray[i - 1]); // copyrights eric-cruz-plyground-functions | GitHub: Effolex
