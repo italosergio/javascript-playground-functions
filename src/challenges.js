@@ -1,7 +1,3 @@
-/* eslint-disable max-lines-per-function */
-/* eslint-disable complexity */
-/* eslint-disable no-undef */
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
@@ -99,47 +95,29 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-
+// let string = 'aeiougqwerigcb'
 function encode(string) {
-  let numStringArray = [];
+  let nString = string;
+  let refArray = ['a', 'e', 'i', 'o', 'u'];
   for (let i of string) {
-    if (i !== 'a' && i !== 'e' && i !== 'i' && i !== 'o' && i !== 'u') {
-      numStringArray.push(i);
-    } else if (i === 'a') {
-      numStringArray.push('1');
-    } else if (i === 'e') {
-      numStringArray.push('2');
-    } else if (i === 'i') {
-      numStringArray.push('3');
-    } else if (i === 'o') {
-      numStringArray.push('4');
-    } else if (i === 'u') {
-      numStringArray.push('5');
+    if (refArray.includes(i)) { // copyrights eric-cruz-plyground-functions | GitHub: Effolex
+      nString = nString.replace(i, refArray.indexOf(i) + 1); // copyrights eric-cruz-plyground-functions | GitHub: Effolex
     }
   }
-
-  return numStringArray.join('');
+  return nString;
 }
+// console.log(encode())
 
 function decode(string) {
-  let numStringArray = [];
+  let nString = string;
+  let refArray = ['a', 'e', 'i', 'o', 'u']; 
+  let refArrayNum = ['1', '2', '3', '4', '5']; 
   for (let i of string) {
-    if (i !== '1' && i !== '2' && i !== '3' && i !== '4' && i !== '5') {
-      numStringArray.push(i);
-    } else if (i === '1') {
-      numStringArray.push('a');
-    } else if (i === '2') {
-      numStringArray.push('e');
-    } else if (i === '3') {
-      numStringArray.push('i');
-    } else if (i === '4') {
-      numStringArray.push('o');
-    } else if (i === '5') {
-      numStringArray.push('u');
+    if (refArrayNum.includes(i)) { // copyrights eric-cruz-plyground-functions | GitHub: Effolex
+      nString = nString.replace(i, refArray[i-1]); // copyrights eric-cruz-plyground-functions | GitHub: Effolex
     }
   }
-
-  return numStringArray.join('');
+  return nString;
 }
 
 module.exports = {

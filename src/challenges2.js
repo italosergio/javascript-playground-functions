@@ -1,5 +1,3 @@
-/* eslint-disable complexity */
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 10
 
 function techList(array, name) {
@@ -37,7 +35,10 @@ function generatePhoneNumber(array) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
-    return `(${array[0]}${array[1]})` + ` ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+    let ddd = `(${array[0]}${array[1]})`;
+    let numPart0 = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
+    let numPart1 = `${array[7]}${array[8]}${array[9]}${array[10]}`;
+    return `${ddd} ${numPart0}-${numPart1}`;
   }
   return 'Array com tamanho incorreto.';
 }
@@ -49,12 +50,29 @@ function generatePhoneNumber(array) {
 // let lineC = 5
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
+  if (triangleCalcSide(lineA, lineB, lineC) && triangleCalcDif(lineA, lineB, lineC)) {
     return true;
   }
   return false;
 }
-// console.log(triangleCheck())
+
+function triangleCalcSide(lineA, lineB, lineC) {
+  let log = false;
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    log = true;
+  }
+  return log;
+}
+function triangleCalcDif(lineA, lineB, lineC) {
+  let log = false;
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC)) {
+    log = true;
+  } else if (lineC > Math.abs(lineB - lineA)) {
+    log = true;
+  }
+  return log;
+}
+console.log(triangleCheck());
 
 // Desafio 13
 function hydrate(string) {
