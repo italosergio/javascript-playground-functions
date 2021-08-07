@@ -25,72 +25,71 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(array) {
-  return novaArray = array[array.length - 1] + ', ' + array[0];
+  let a = array.length - 1;
+  let b = array[a];
+  b += ', ';
+  b += array[0];
+  return b;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return pontos = wins*3 + ties*1
+  return wins * 3 + ties * 1;
 }
 
 // Desafio 6
-function highestCount(array) {
-  
-  let mem = Number.NEGATIVE_INFINITY
-
-    for (let i of array){
-        if( i > mem){
-            
-            mem = i;
-        }
-}
-let cont = 0
-
-    for (i of array){
-        if (mem === i)
-        
-            cont+=1
+function mNumCalc(array) {
+  let mem = array[0];
+  for (let i of array) {
+    if (i > mem) {
+      mem = i;
     }
-
-
-return cont
+  }
+  return mem;
 }
 
+function highestCount(array) {
+  let cont = 0;
+  let maior = mNumCalc(array);
+  for (let i of array) {
+    if (maior === i) {
+      cont += 1;
+    }
+  }
+  return cont;
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(cat1%mouse === cat2%mouse){
-    
-    return 'os gatos trombam e o rato foge'
-    
-  }else if (cat1-mouse > cat2-mouse){
-    
-    return 'cat2'
-    
-  }else if(cat1-mouse < cat2-mouse){
-    
-    return 'cat1'
+  let resposta = '';
+  if (cat1 % mouse === cat2 % mouse) {
+    resposta = 'os gatos trombam e o rato foge';
+  } else if (cat1 - mouse > cat2 - mouse) {
+    resposta = 'cat2';
+  } else {
+    resposta = 'cat1';
   }
+  return resposta;
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let novoArray = []
-     for (i in array){
-      
-      if (array[i]%5 === 0 && array[i]%3 === 0){
-          novoArray.push('fizzBuzz');
-      }else if(array[i]%5 === 0){
-          novoArray.push('buzz');
-      }else if (array[i]%3 === 0){
-          novoArray.push('fizz');
-      }else{
-          novoArray.push("bug!");
-      }
-      
-    }
-    return novoArray
+function functionIf(array) {
+  let novoArray = [];
+  if (array[i] % 5 === 0 && array[i]%3 === 0) {
+     novoArray.push('fizzBuzz');
+  }else if(array[i]%5 === 0){
+     novoArray.push('buzz');
+  }else if (array[i]%3 === 0){
+     novoArray.push('fizz');
+  }else{
+     novoArray.push("bug!");
   }
+  return novoArray
+}
+function fizzBuzz(array) {
+  for (let i of array){
+  return functionIf(array)
+}
 
 // Desafio 9
 
