@@ -1,44 +1,48 @@
 // Desafio 1
+
 function compareTrue(a, b) {
   return a && b;
 }
+
 // Desafio 2
+
 function calcArea(base, height) {
   let areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
 // Desafio 3
+
 function splitSentence(string) {
-  let nova = '';
+  let novaString = '';
   let array = [];
   for (let i in string) {
     if (string[i] !== ' ') {
-      nova += string[i];
+      novaString += string[i];
     } else {
-      array.push(nova);
-      nova = '';
+      array.push(novaString);
+      novaString = '';
     }
   }
-  array.push(nova);
+  array.push(novaString);
   return array;
 }
+
 // Desafio 4
+
 function concatName(array) {
-  let a = array.length - 1;
-  let b = array[a];
-  b += ', ';
-  b += array[0];
-  return b;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
+
 function footballPoints(wins, ties) {
   return wins * 3 + ties * 1;
 }
 
 // Desafio 6
-function mNumCalc(array) {
+
+function highestNumCalc(array) {
   let mem = array[0];
   for (let i of array) {
     if (i > mem) {
@@ -50,9 +54,9 @@ function mNumCalc(array) {
 
 function highestCount(array) {
   let cont = 0;
-  let maior = mNumCalc(array);
+  let highest = highestNumCalc(array);
   for (let i of array) {
-    if (maior === i) {
+    if (highest === i) {
       cont += 1;
     }
   }
@@ -60,64 +64,66 @@ function highestCount(array) {
 }
 
 // Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
-  let resposta = '';
+  let ans = '';
   if (cat1 % mouse === cat2 % mouse) {
-    resposta = 'os gatos trombam e o rato foge';
+    ans = 'os gatos trombam e o rato foge';
   } else if (cat1 - mouse > cat2 - mouse) {
-    resposta = 'cat2';
+    ans = 'cat2';
   } else {
-    resposta = 'cat1';
+    ans = 'cat1';
   }
-  return resposta;
+  return ans;
 }
 
 // Desafio 8
+
 function functionIf(i) {
-  let resposta = '';
+  let ans = '';
   if (i % 5 === 0 && i % 3 === 0) {
-    resposta = 'fizzBuzz';
+    ans = 'fizzBuzz';
   } else if (i % 5 === 0) {
-    resposta = 'buzz';
+    ans = 'buzz';
   } else if (i % 3 === 0) {
-    resposta = 'fizz';
+    ans = 'fizz';
   } else {
-    resposta = 'bug!';
+    ans = 'bug!';
   }
-  return resposta;
+  return ans;
 }
+
 function fizzBuzz(array) {
-  let novoArray = [];
+  let newArray = [];
   for (let i of array) {
-    novoArray.push(functionIf(i));
+    newArray.push(functionIf(i));
   }
-  return novoArray;
+  return newArray;
 }
 
 // Desafio 9
-// let string = 'aeiougqwerigcb'
+
 function encode(string) {
-  let nString = string;
+  let newString = string;
   let refArray = ['a', 'e', 'i', 'o', 'u'];
   for (let i of string) {
     if (refArray.includes(i)) { // copyrights eric-cruz-plyground-functions | GitHub: Effolex
-      nString = nString.replace(i, refArray.indexOf(i) + 1); // copyrights eric-cruz-plyground-functions | GitHub: Effolex
+      newString = newString.replace(i, refArray.indexOf(i) + 1); // copyrights eric-cruz-plyground-functions | GitHub: Effolex
     }
   }
-  return nString;
+  return newString;
 }
-// console.log(encode())
 
 function decode(string) {
-  let nString = string;
-  let refArray = ['a', 'e', 'i', 'o', 'u'];
+  let newString = string;
+  let refArrayLet = ['a', 'e', 'i', 'o', 'u'];
   let refArrayNum = ['1', '2', '3', '4', '5'];
   for (let i of string) {
     if (refArrayNum.includes(i)) { // copyrights eric-cruz-plyground-functions | GitHub: Effolex
-      nString = nString.replace(i, refArray[i - 1]); // copyrights eric-cruz-plyground-functions | GitHub: Effolex
+      newString = newString.replace(i, refArrayLet[i - 1]); // copyrights eric-cruz-plyground-functions | GitHub: Effolex
     }
   }
-  return nString;
+  return newString;
 }
 
 module.exports = {
