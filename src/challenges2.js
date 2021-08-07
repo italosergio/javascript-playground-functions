@@ -1,6 +1,3 @@
-/* eslint-disable no-else-return */
-/* eslint-disable prefer-template */
-/* eslint-disable max-lines-per-function */
 /* eslint-disable complexity */
 /* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 10
@@ -13,8 +10,7 @@ function techList(array, name) {
     for (let i of nArray) {
       let objeto = {
         tech: i,
-        // eslint-disable-next-line object-shorthand
-        name: name,
+        name,
       };
       mArray.push(objeto);
     }
@@ -27,11 +23,12 @@ function techList(array, name) {
 
 // Desafio 11
 // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
+// eslint-disable-next-line complexity
 function generatePhoneNumber(array) {
   if (array.length === 11) {
     for (let i of array) {
       let repetiu = 0;
-      for (let j of array) {
+      for (j of array) {
         if (j === i) {
           repetiu += 1;
         }
@@ -40,13 +37,9 @@ function generatePhoneNumber(array) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
-
-    let ddd = '(' + array[0] + array[1] + ')';
-    let num = ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
-    return ddd + num;
-  } else {
-    return 'Array com tamanho incorreto.';
+    return `(${array[0]}${array[1]})` + ` ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
   }
+  return 'Array com tamanho incorreto.';
 }
 // console.log(generatePhoneNumber())
 
@@ -56,23 +49,25 @@ function generatePhoneNumber(array) {
 // let lineC = 5
 
 function triangleCheck(lineA, lineB, lineC) {
-  let resposta = true;
-  if (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA)) {
-    resposta = true;
-  } else if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    resposta = true;
-  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    resposta = true;
-  } else {
-    resposta = false;
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
+    return true;
   }
-  return resposta;
+  return false;
 }
 // console.log(triangleCheck())
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let resposta = 0;
+  for (let i of string) {
+    if (i > 0) {
+      resposta += Number(i);
+    }
+  }
+  if (resposta === 1) {
+    return `${resposta} copo de água`;
+  }
+  return `${resposta} copos de água`;
 }
 
 module.exports = {
