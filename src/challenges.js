@@ -1,3 +1,7 @@
+/* eslint-disable max-lines-per-function */
+/* eslint-disable complexity */
+/* eslint-disable no-undef */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
@@ -79,7 +83,7 @@ function functionIf(i) {
     resposta = 'fizzBuzz';
   } else if (i % 5 === 0) {
     resposta = 'buzz';
-  } else if (i%3 === 0) {
+  } else if (i % 3 === 0) {
     resposta = 'fizz';
   } else {
     resposta = 'bug!';
@@ -97,48 +101,46 @@ function fizzBuzz(array) {
 // Desafio 9
 
 function encode(string) {
-    let numStringArray = []
-    for (i of string){
-      if (i!='a' && i!='e' && i!='i' && i!='o' && i!='u'){
-        numStringArray.push(i)
-      }else if (i==='a'){
-        numStringArray.push('1')
-      }else if (i==='e'){
-        numStringArray.push('2')
-      }else if (i==='i'){
-        numStringArray.push('3')
-      }else if (i==='o'){
-        numStringArray.push('4')
-      }else if (i==='u'){
-        numStringArray.push('5')
-      }
+  let numStringArray = [];
+  for (i of string) {
+    if (i !== 'a' && i !== 'e' && i !== 'i' && i !== 'o' && i !== 'u') {
+      numStringArray.push(i);
+    } else if (i === 'a') {
+      numStringArray.push('1');
+    } else if (i === 'e') {
+      numStringArray.push('2');
+    } else if (i === 'i') {
+      numStringArray.push('3');
+    } else if (i === 'o') {
+      numStringArray.push('4');
+    } else if (i === 'u') {
+      numStringArray.push('5');
     }
+  }
 
-  return numStringArray.join('')
+  return numStringArray.join('');
 }
 
-  function decode(string) {
+function decode(string) {
+  let numStringArray = [];
 
-    let numStringArray = []
-
-    for (i of string){
-      
-      if (i!='1' && i!='2' && i!='3' && i!='4' && i!='5'){
-        numStringArray.push(i)
-      }else if (i==='1'){
-        numStringArray.push('a')
-      }else if (i==='2'){
-        numStringArray.push('e')
-      }else if (i==='3'){
-        numStringArray.push('i')
-      }else if (i==='4'){
-        numStringArray.push('o')
-      }else if (i==='5'){
-        numStringArray.push('u')
-      }
+  for (i of string) {
+    if (i !== '1' && i !== '2' && i !== '3' && i !== '4' && i !== '5') {
+      numStringArray.push(i);
+    } else if (i === '1') {
+      numStringArray.push('a');
+    } else if (i === '2') {
+      numStringArray.push('e');
+    } else if (i === '3') {
+      numStringArray.push('i');
+    } else if (i === '4') {
+      numStringArray.push('o');
+    } else if (i === '5') {
+      numStringArray.push('u');
     }
+  }
 
-    return numStringArray.join('')
+  return numStringArray.join('');
 }
 
 module.exports = {
