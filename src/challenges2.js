@@ -21,19 +21,29 @@ function techList(array, name) {
 
 // Desafio 11
 // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
-// eslint-disable-next-line complexity
+function repeat(array, i) {
+  let repetiu = 0;
+  for (let j of array) {
+    if (j === i) {
+      repetiu += 1;
+    }
+  }
+  return repetiu;
+}
+function repeatCompare(array) {
+  let a = false;
+  for (let i of array) {
+    if (array[i] < 0 || array[i] > 9 || repeat(array, i) >= 3) {
+      a = true;
+      break;
+    }
+  }
+  return a;
+}
 function generatePhoneNumber(array) {
   if (array.length === 11) {
-    for (let i of array) {
-      let repetiu = 0;
-      for (let j of array) {
-        if (j === i) {
-          repetiu += 1;
-        }
-      }
-      if (array[i] < 0 || array[i] > 9 || repetiu >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+    if (repeatCompare(array)) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let ddd = `(${array[0]}${array[1]})`;
     let numPart0 = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
@@ -45,17 +55,6 @@ function generatePhoneNumber(array) {
 // console.log(generatePhoneNumber())
 
 // Desafio 12
-// let lineA = 2
-// let lineB = 2
-// let lineC = 5
-
-function triangleCheck(lineA, lineB, lineC) {
-  if (triangleCalcSide(lineA, lineB, lineC) && triangleCalcDif(lineA, lineB, lineC)) {
-    return true;
-  }
-  return false;
-}
-
 function triangleCalcSide(lineA, lineB, lineC) {
   let log = false;
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
@@ -65,14 +64,24 @@ function triangleCalcSide(lineA, lineB, lineC) {
 }
 function triangleCalcDif(lineA, lineB, lineC) {
   let log = false;
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC)) {
+  let a = lineA > Math.abs(lineB - lineC);
+  let b = lineB > Math.abs(lineA - lineC);
+  let c = lineC > Math.abs(lineB - lineA);
+  if (a && b && c) {
     log = true;
-  } else if (lineC > Math.abs(lineB - lineA)) {
-    log = true;
+  } else {
+    log = false;
   }
   return log;
 }
-console.log(triangleCheck());
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (triangleCalcSide(lineA, lineB, lineC) && triangleCalcDif(lineA, lineB, lineC)) {
+    return true;
+  }
+  return false;
+}
+// console.log(triangleCheck());
 
 // Desafio 13
 function hydrate(string) {
