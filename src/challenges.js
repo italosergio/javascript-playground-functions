@@ -73,32 +73,32 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function functionIf(array) {
-  let novoArray = [];
-  if (array[i] % 5 === 0 && array[i]%3 === 0) {
-     novoArray.push('fizzBuzz');
-  }else if(array[i]%5 === 0){
-     novoArray.push('buzz');
-  }else if (array[i]%3 === 0){
-     novoArray.push('fizz');
-  }else{
-     novoArray.push("bug!");
+function functionIf(i) {
+  let resposta = '';
+  if (i % 5 === 0 && i % 3 === 0) {
+    resposta = 'fizzBuzz';
+  } else if (i % 5 === 0) {
+    resposta = 'buzz';
+  } else if (i%3 === 0) {
+    resposta = 'fizz';
+  } else {
+    resposta = 'bug!';
   }
-  return novoArray
+  return resposta;
 }
 function fizzBuzz(array) {
-  for (let i of array){
-  return functionIf(array)
+  let novoArray = [];
+  for (let i of array) {
+    novoArray.push(functionIf(i));
+  }
+  return novoArray;
 }
 
 // Desafio 9
 
 function encode(string) {
-
     let numStringArray = []
-
     for (i of string){
-      
       if (i!='a' && i!='e' && i!='i' && i!='o' && i!='u'){
         numStringArray.push(i)
       }else if (i==='a'){
