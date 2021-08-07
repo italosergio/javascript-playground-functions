@@ -28,7 +28,7 @@ function generatePhoneNumber(array) {
   if (array.length === 11) {
     for (let i of array) {
       let repetiu = 0;
-      for (j of array) {
+      for (let j of array) {
         if (j === i) {
           repetiu += 1;
         }

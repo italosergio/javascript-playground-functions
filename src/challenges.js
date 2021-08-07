@@ -102,7 +102,7 @@ function fizzBuzz(array) {
 
 function encode(string) {
   let numStringArray = [];
-  for (i of string) {
+  for (let i of string) {
     if (i !== 'a' && i !== 'e' && i !== 'i' && i !== 'o' && i !== 'u') {
       numStringArray.push(i);
     } else if (i === 'a') {
@@ -123,8 +123,7 @@ function encode(string) {
 
 function decode(string) {
   let numStringArray = [];
-
-  for (i of string) {
+  for (let i of string) {
     if (i !== '1' && i !== '2' && i !== '3' && i !== '4' && i !== '5') {
       numStringArray.push(i);
     } else if (i === '1') {
