@@ -40,3 +40,5 @@ Instale as dependências
 .
 
 _*** README em construção..._
+
+<img src="https://apuracaoconselho.manaus.am.gov.br/resources/img/loading.gif" alt="gif loading" />
