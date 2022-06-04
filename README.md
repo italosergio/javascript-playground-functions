@@ -40,7 +40,7 @@ Instale as dependências
 Abra `/src/challenges.js` e `/src/challenges2.js`
 
 # Testes
-Após seguir todos os passos de [como acessar](https://github.com/italosergio/javascript-playground-functions/edit/main/README.md#como-acessar), execute:
+Após seguir todos os passos de [como acessar](https://github.com/italosergio/javascript-playground-functions#como-acessar), execute:
   - `npm test`
 
 Caso queira executar um teste por vez: <br>
