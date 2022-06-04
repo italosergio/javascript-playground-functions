@@ -26,6 +26,7 @@ function numberRepeat(array, refNumber) {
       repeat += 1;
     }
   }
+
   return repeat;
 }
 
