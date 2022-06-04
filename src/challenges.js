@@ -14,6 +14,7 @@ function compareTrue(a, b) {
 
 function calcArea(base, height) {
   const triangleArea = (base * height) / 2;
+
   return triangleArea;
 }
 
@@ -31,6 +32,7 @@ function splitSentence(string) {
       concatStrings = '';
     }
   }
+  
   arrayOfWords.push(concatStrings);
 
   return arrayOfWords;
@@ -53,7 +55,7 @@ function concatName(array) {
   }
 
   return newSentence;
-  // Or not using primitive types, simply return `${array[array.length - 1]}, ${array[0]}`;
+  // Or simply return `${array[array.length - 1]}, ${array[0]}`;
 }
 // Desafio 5
 
@@ -69,11 +71,13 @@ function footballPoints(wins, draws) {
 
 function highestNumCalc(numberArray) {
   let highestNumber = numberArray[0];
+
   for (let currentValue of numberArray) {
     if (currentValue > highestNumber) {
       highestNumber = currentValue;
     }
   }
+
   return highestNumber;
 }
 
@@ -86,6 +90,7 @@ function highestCount(array) {
       highestNumberCounter += 1;
     }
   }
+
   return highestNumberCounter;
 }
 
@@ -116,6 +121,7 @@ function defineFizzBuzzOrBug(number) {
   } else if (isDivisibleByThree) {
     return 'fizz';
   }
+
   return 'bug!';
 }
 
@@ -125,6 +131,7 @@ function fizzBuzz(array) {
   for (let value of array) {
     fizzBuzzBugArray.push(defineFizzBuzzOrBug(value));
   }
+
   return fizzBuzzBugArray;
 }
 
@@ -155,6 +162,7 @@ function encode(string) {
       break;
     }
   }
+
   return encodedString;
 }
 

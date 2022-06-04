@@ -26,13 +26,14 @@ function numberRepeat(array, refNumber) {
       repeat += 1;
     }
   }
+
   return repeat;
 }
 
 function isInvalidValues(array) {
   const repeatsThreeTimes = (number) => numberRepeat(array, number) >= 3;
-  const isGreaterThanNine = (number) => array[number] > 9;
-  const isLessThanZero = (number) => array[number] < 0 ;
+  const isGreaterThanNine = (number) => number > 9;
+  const isLessThanZero = (number) => number < 0 ;
 
   for (let number of array) {
     if (isGreaterThanNine(number) || isLessThanZero(number) || repeatsThreeTimes(number)) return true;
@@ -90,8 +91,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 function hydrate(string) {
   let waterCupsCounter = 0;
+  const consumeArray = string.split(' ');
 
-  for (let value of string) {
+  for (let value of consumeArray) {
     if (Number(value)) waterCupsCounter += Number(value);
   }
 
