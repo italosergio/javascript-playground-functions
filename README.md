@@ -187,11 +187,11 @@ Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
 
 **O que será verificado:**
 
-- Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
+- Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado o parâmetro [2, 15, 7, 9, 45] para a função fizzBuzz
 
-- Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
+- Retorne as strings ['bug!', 'fizz'] quando é passado o parâmetro [7, 9] para a função fizzBuzz
 
-- Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz
+- Retorne as strings ['fizz', 'buzz'] quando é passado o parâmetro [9, 25] para a função fizzBuzz
 
 
 ### 9 - Crie uma função que Codifique e Decodifique
