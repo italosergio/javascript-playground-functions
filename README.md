@@ -8,11 +8,11 @@ utilizando js puro, com funções e tipos primitivos (sem HOFs 🧠💥).
 
 - Escrever códigos em JavaScript que usam `constantes, variáveis, funcões e tipos primitivos`;
 
-- Utilizar conceitos da linguagem como a `tipagem dinâmica` e `operadores lógicos/aritméticos/de atribuição` no seu código;
+- Utilizar conceitos da linguagem como a `tipagem dinâmica` e `operadores lógicos/aritméticos/de atribuição`;
 
-- Criar códigos que usam estruturas condicionais, como o `if/else` ;
+- Criar códigos que usam estruturas condicionais `if/else` ;
 
-- Manipular arrays (listas);
+- Manipular `arrays` (listas);
 
 - Quebrar grandes problemas em pequenos;
 
@@ -24,7 +24,7 @@ utilizando js puro, com funções e tipos primitivos (sem HOFs 🧠💥).
 
 - Utilizar o comando `for in/of`;
 
-- Utilizar `funções` para organizar e estruturar o seu código;
+- Utilizar `funções` para organizar e estruturar o código;
 
 # Como acessar
 
@@ -38,6 +38,14 @@ Instale as dependências
   - `npm install`
 
 Abra `/src/challenges.js` e `/src/challenges2.js`
+
+# Testes
+Após seguir todos os passos de [como acessar](https://github.com/italosergio/javascript-playground-functions/edit/main/README.md#como-acessar), execute:
+  - `npm test`
+
+Caso queira executar um teste por vez: <br>
+  Exemplo:
+  - `npm test 13_` - para executar o teste do desafio 13 (lembre-se de colocar o "`_`") 
 
 # Desafios:
   - [1 - Crie uma função usando o operador &&](#1---crie-uma-função-usando-o-operador-)
