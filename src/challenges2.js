@@ -100,8 +100,6 @@ function hydrate(string) {
   return `${waterCupsCounter} copos de água`;
 }
 
-console.log(hydrate('1'));
-
 module.exports = {
   generatePhoneNumber,
   techList,
