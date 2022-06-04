@@ -1,8 +1,12 @@
+## Bem vinda(o)!
+Deguste um código limpo, semântico, e com soluções lógicas incríveis <br>
+utilizando js puro, com funções e tipos primitivos (sem HOFs 🧠💥).
+
 <img src="https://media0.giphy.com/media/ln7z2eWriiQAllfVcn/giphy.gif?cid=6c09b952owhu2s55xdcpopiyf5kqy5jvpgem3yusodg2pt9t&rid=giphy.gif&ct=s" alt="My cool logo" alt="GIF - Quadrado amarelo com as letras J e S pretas dentro em tamanho grande, alternando formas quadradas divertidamente"/>
 
 # Habilidades
 
-- Escrever códigos em JavaScript que usam `variáveis e tipos primitivos`;
+- Escrever códigos em JavaScript que usam `constantes, variáveis, funcões e tipos primitivos`;
 
 - Utilizar conceitos da linguagem como a `tipagem dinâmica` e `operadores lógicos/aritméticos/de atribuição` no seu código;
 
@@ -10,17 +14,17 @@
 
 - Manipular arrays (listas);
 
-- Utilizar o comando `for`;
-
 - Quebrar grandes problemas em pequenos;
 
 - Utilizar a `lógica de programação` na resolução de problemas;
 
 - Manipular `objetos`;
 
-- Utilizar o comando `for/in`;
+- Utilizar o comando `for`;
 
-- Utilizar funções para organizar e estruturar o seu código;
+- Utilizar o comando `for in/of`;
+
+- Utilizar `funções` para organizar e estruturar o seu código;
 
 # Como acessar
 
@@ -34,8 +38,6 @@ Instale as dependências
   - `npm install`
 
 Abra `/src/challenges.js` e `/src/challenges2.js`
-
-Divirta-se usando as funções que eu criei!!
 
 # Desafios:
   - [1 - Crie uma função usando o operador &&](#1---crie-uma-função-usando-o-operador-)
