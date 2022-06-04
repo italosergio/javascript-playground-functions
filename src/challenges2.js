@@ -1,101 +1,106 @@
 // Desafio 10
 
 function techList(array, name) {
-  let saveOrdenedArray = array.sort();
-  let newArray = [];
-  let ans;
-  if (saveOrdenedArray.length !== 0) {
-    for (let i of saveOrdenedArray) {
-      let object = {
-        tech: i,
-        name,
-      };
-      newArray.push(object);
+  const orderTechArray = array.sort();
+  let newTechArray = [];
+
+  if (orderTechArray.length !== 0) {
+    for (let tech of orderTechArray) {
+      const techObject = { tech, name };
+      newTechArray.push(techObject);
     }
-    ans = newArray;
-  } else {
-    ans = 'Vazio!';
+
+    return newTechArray;
   }
-  return ans;
+
+  return 'Vazio!';
 }
 
 // Desafio 11
 
-function repeat(array, i) {
-  let repetiu = 0;
-  for (let j of array) {
-    if (j === i) {
-      repetiu += 1;
+function numberRepeat(array, refNumber) {
+  let repeat = 0;
+
+  for (let number of array) {
+    if (number === refNumber) {
+      repeat += 1;
     }
   }
-  return repetiu;
+  return repeat;
 }
-function repeatCompare(array) {
-  let a = false;
-  for (let i of array) {
-    if (array[i] < 0 || array[i] > 9 || repeat(array, i) >= 3) {
-      a = true;
-      break;
-    }
+
+function isInvalidValues(array) {
+  const repeatsThreeTimes = (number) => numberRepeat(array, number) >= 3;
+  const isGreaterThanNine = (number) => array[number] > 9;
+  const isLessThanZero = (number) => array[number] < 0 ;
+
+  for (let number of array) {
+    if (isGreaterThanNine(number) || isLessThanZero(number) || repeatsThreeTimes(number)) return true;
   }
-  return a;
+
+  return false;
 }
+
 function generatePhoneNumber(array) {
-  if (array.length === 11) {
-    if (repeatCompare(array)) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    let ddd = `(${array[0]}${array[1]})`;
-    let numPart0 = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
-    let numPart1 = `${array[7]}${array[8]}${array[9]}${array[10]}`;
-    return `${ddd} ${numPart0}-${numPart1}`;
-  }
-  return 'Array com tamanho incorreto.';
+  if (array.length !== 11) return 'Array com tamanho incorreto.';
+  if (isInvalidValues(array)) return 'não é possível gerar um número de telefone com esses valores';
+
+  const ddd = `(${array[0]}${array[1]})`;
+  const numPart0 = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
+  const numPart1 = `${array[7]}${array[8]}${array[9]}${array[10]}`;
+
+  return `${ddd} ${numPart0}-${numPart1}`;
 }
 
 // Desafio 12
 
-function triangleCalcSide(lineA, lineB, lineC) {
-  let log = false;
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    log = true;
+function sideSumValidate(sideA, sideB, sideC) {
+  const isFirstSideValid = sideA < (sideB + sideC);
+  const isSecondSideValid = sideB < (sideA + sideC);
+  const isThirdSideValid = sideC < (sideA + sideB);
+
+  if (isFirstSideValid && isSecondSideValid && isThirdSideValid) {
+    return true;
   }
-  return log;
+
+  return false;
 }
-function triangleCalcDif(lineA, lineB, lineC) {
-  let log = false;
-  let a = lineA > Math.abs(lineB - lineC);
-  let b = lineB > Math.abs(lineA - lineC);
-  let c = lineC > Math.abs(lineB - lineA);
-  if (a && b && c) {
-    log = true;
-  } else {
-    log = false;
+
+function sideDifValidate(sideA, sideB, sideC) {
+  const isFirstSideValid = sideA > Math.abs(sideB - sideC);
+  const isSecondSideValid = sideB > Math.abs(sideA - sideC);
+  const isThirdSideValid = sideC > Math.abs(sideB - sideA);
+
+  if (isFirstSideValid && isSecondSideValid && isThirdSideValid) {
+    return true;
   }
-  return log;
+
+  return false;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (triangleCalcSide(lineA, lineB, lineC) && triangleCalcDif(lineA, lineB, lineC)) {
+  if (sideSumValidate(lineA, lineB, lineC) && sideDifValidate(lineA, lineB, lineC)) {
     return true;
   }
+
   return false;
 }
 
 // Desafio 13
 
 function hydrate(string) {
-  let resposta = 0;
-  for (let i of string) {
-    if (i > 0) {
-      resposta += Number(i);
-    }
+  let waterCupsCounter = 0;
+
+  for (let value of string) {
+    if (Number(value)) waterCupsCounter += Number(value);
   }
-  if (resposta === 1) {
-    return `${resposta} copo de água`;
-  }
-  return `${resposta} copos de água`;
+
+  if (waterCupsCounter === 1) return `${waterCupsCounter} copo de água`;
+
+  return `${waterCupsCounter} copos de água`;
 }
+
+console.log(hydrate('1'));
 
 module.exports = {
   generatePhoneNumber,
